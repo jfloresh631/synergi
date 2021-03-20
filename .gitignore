@@ -1,0 +1,4 @@
+# Ignore prettier config file
+.prettierignore
+# Ignore vscode config files
+vscode/*
