@@ -1,3 +1,108 @@
 @use './tools/_variables' as v
 @use './tools/_functions' as f
 @use './tools/_mixins' as m
+
+body
+  font-family: v.$fnt-primary
+
+.limiter
+  align-items: center
+  display: flex
+  height: 100%
+  justify-content: space-between
+  margin: 0 auto
+  max-width: 1200px
+  padding: 0 20px
+
+.topbar
+  background-color: v.$bkg-primary
+  height: 60px
+  position: sticky
+  top: 0
+  z-index: 99
+
+.topbar__logo
+  color: v.$txt-secondary
+  font-size: 22px
+  font-weight: 700
+
+.button
+  border: 0
+  border-radius: v.$btn-height / 2
+  font-family: v.$fnt-primary
+  font-weight: 600
+  height: v.$btn-height
+  padding: 0 35px
+
+.button--icon
+  align-items: center
+  background-color: v.$transparent
+  display: flex
+  font-size: 24px
+  justify-content: center
+  padding: 0
+  width: v.$btn-height
+
+.button--primary
+  background-color: v.$btn-primary
+  color: v.$btn-secondary
+
+.button--icon svg
+  color: v.$icon-primary
+
+.navbar
+  align-items: center
+  background-color: v.$btn-secondary
+  display: flex
+  flex-direction: column
+  grid-gap: 60px
+  height: 100%
+  left: -100%
+  padding: 20px
+  position: fixed
+  top: 0
+  transition: left 0.5s ease-in-out
+  width: 100%
+  z-index: 999
+
+.navbar > button:first-child
+  align-self: flex-end
+
+.navbar__list
+  grid-gap: 30px
+  display: flex
+  flex-direction: column
+
+.navbar__item
+  position: relative
+
+.navbar__link
+  color: v.$txt-primary
+  font-weight: 500
+  text-decoration: none
+
+.navbar__link--active
+  color: v.$txt-secondary
+  font-weight: 700
+
+@media screen and ( min-width: 768px )
+  .limiter > button,
+  .navbar > button:first-child
+    display: none
+
+  .topbar
+    height: 80px
+
+  .navbar
+    position: initial
+    padding: 0
+    flex-direction: row
+    width: auto
+    background-color: v.$transparent
+
+  .navbar__list
+    flex-direction: row
+
+  .navbar__link,
+  .button
+    font-size: 14px
