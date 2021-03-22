@@ -16,7 +16,7 @@ body
 
 .topbar
   background-color: v.$bkg-primary
-  height: 60px
+  height: 70px
   position: sticky
   top: 0
   z-index: 99
@@ -59,7 +59,7 @@ body
 
 .navbar
   align-items: center
-  background-color: v.$btn-secondary
+  background-color: v.$bkg-secondary
   display: flex
   flex-direction: column
   grid-gap: 60px
@@ -76,42 +76,53 @@ body
   align-self: flex-end
 
 .navbar__list
-  grid-gap: 30px
   display: flex
   flex-direction: column
+  grid-gap: 30px
 
 .navbar__item
   position: relative
 
 .navbar__link
   color: v.$txt-primary
-  font-weight: 500
   text-decoration: none
+  font-weight: 500
 
 .navbar__link--active
   color: v.$txt-secondary
   font-weight: 700
 
 .main
-  padding: 40px 0
+  padding: 30px 0
 
 .main .limiter
   position: relative
 
 .banner
+  width: 100%
+
+.banner > div > span
+  align-items: center
+  display: flex
+
+.banner > div
   align-items: center
   display: flex
   flex-direction: column
-  grid-gap: 30px
+  grid-row-gap: 30px
   margin: 0 auto
   max-width: 500px
   text-align: center
 
+.banner button
+  margin-top: 20px
+
 .banner__title
   color: v.$txt-secondary
-  font-size: 38px
+  font-size: 42px
   font-weight: 600
-  line-height: 48px
+  line-height: 52px
+  text-transform: capitalize
 
 .accent
   color: v.$txt-accent
@@ -127,15 +138,12 @@ body
   .navbar > button:first-child
     display: none
 
-  .topbar
-    height: 80px
-
   .navbar
-    position: initial
-    padding: 0
-    flex-direction: row
-    width: auto
     background-color: v.$transparent
+    flex-direction: row
+    padding: 0
+    position: initial
+    width: auto
 
   .navbar__list
     flex-direction: row
@@ -152,23 +160,23 @@ body
   .limiter
     padding: 0 30px
 
+  .main
+    padding: 50px 0
+
   .banner
-    margin: 0 auto 0 0
+    align-items: center
+    display: grid
+    grid-column-gap: 10px
+    grid-template: 1fr / 1fr 1fr
+
+  .banner > div
     align-items: flex-start
+    margin: 0
     text-align: left
 
   .banner__title
-    font-size: 58px
-    line-height: 68px
+    font-size: 56px
+    line-height: 66px
 
   .banner__image
     display: initial
-    max-width: 490px
-    position: absolute
-    right: 30px
-    top: 20px
-
-@media screen and ( min-width: 1200px )
-  .banner__image
-    max-width: 590px
-    top: -10px
