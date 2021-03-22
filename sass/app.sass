@@ -43,12 +43,19 @@ body
   padding: 0
   width: v.$btn-height
 
+.button--icon svg
+  color: v.$icon-primary
+
 .button--primary
   background-color: v.$btn-primary
   color: v.$btn-secondary
 
-.button--icon svg
-  color: v.$icon-primary
+.button--thin
+  background-color: v.$btn-secondary
+  border-radius: (v.$btn-height - 2) / 2
+  color: v.$txt-secondary
+  height: 36px
+  padding: 0 20px
 
 .navbar
   align-items: center
@@ -85,6 +92,36 @@ body
   color: v.$txt-secondary
   font-weight: 700
 
+.main
+  padding: 40px 0
+
+.main .limiter
+  position: relative
+
+.banner
+  align-items: center
+  display: flex
+  flex-direction: column
+  grid-gap: 30px
+  margin: 0 auto
+  max-width: 500px
+  text-align: center
+
+.banner__title
+  color: v.$txt-secondary
+  font-size: 38px
+  font-weight: 600
+  line-height: 48px
+
+.accent
+  color: v.$txt-accent
+
+.banner__info
+  color: v.$txt-primary
+
+.banner__image
+  display: none
+
 @media screen and ( min-width: 768px )
   .limiter > button,
   .navbar > button:first-child
@@ -106,3 +143,32 @@ body
   .navbar__link,
   .button
     font-size: 14px
+
+  .banner__title
+    font-size: 48px
+    line-height: 58px
+
+@media screen and ( min-width: 960px )
+  .limiter
+    padding: 0 30px
+
+  .banner
+    margin: 0 auto 0 0
+    align-items: flex-start
+    text-align: left
+
+  .banner__title
+    font-size: 58px
+    line-height: 68px
+
+  .banner__image
+    display: initial
+    max-width: 490px
+    position: absolute
+    right: 30px
+    top: 20px
+
+@media screen and ( min-width: 1200px )
+  .banner__image
+    max-width: 590px
+    top: -10px
