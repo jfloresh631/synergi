@@ -1,3 +1,5 @@
 # Synergi
 
-Teamwork management landing page
+Landing page for Teamwork Management
+
+![](./docs/design.png)
