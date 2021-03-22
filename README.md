@@ -1,3 +1,3 @@
-# synergi
+# Synergi
 
 Teamwork management landing page
